@@ -5,7 +5,7 @@ category: manuscripts
 excerpt: 'Interpretable symbolic models for forecasting chaotic time series, balancing accuracy with transparent equation discovery.'
 date: 2026-03-01
 venue: 'Under Review.'
-coauthors: "</strong>Panja, M.</strong>, Younes, G., and Chakraborty, T."
+coauthors: "**Panja, M.**, Younes, G., and Chakraborty, T."
 paperurl: 'https://arxiv.org/abs/2603.07261' 
 citation: 'Panja, M., Younes, G., &amp; Chakraborty, T. (2026). &quot;Turning Time Series into Algebraic Equations: Symbolic Machine Learning for Interpretable Modeling of Chaotic Time Series.&quot; <i>arXiv preprint arXiv:2603.07261</i>.'
 bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
