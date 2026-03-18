@@ -15,5 +15,5 @@ Chaotic time series are difficult to forecast due to nonlinear dynamics and sens
 
 <div style="text-align: center; margin: 20px 0;">
   <img src="/images/Symbolic_Forecasting_Model_Architecturre.png" alt="Symbolic Forecasting Framework" style="width: 90%; max-width: 800px;">
-  <p style="font-size: 0.9em; color: #666;"><i>Figure 1: Overview of the Symbolic Neural Forecaster (SyNF) and Symbolic Tree Forecaster (SyTF) architectures.</i></p>
+  <p style="font-size: 0.9em; color: #666;"><i>Overview of the Symbolic Neural Forecaster (SyNF) and Symbolic Tree Forecaster (SyTF) architectures.</i></p>
 </div>
