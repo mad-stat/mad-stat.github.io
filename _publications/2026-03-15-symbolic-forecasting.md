@@ -2,7 +2,6 @@
 title: "Turning Time Series into Algebraic Equations: Symbolic Machine Learning for Interpretable Modeling of Chaotic Time Series."
 collection: publications
 category: manuscripts
-excerpt: 'Interpretable symbolic models for forecasting chaotic time series, balancing accuracy with transparent equation discovery.'
 date: 2026-03-01
 venue: 'Under Review.'
 coauthors: "**Panja, M.**, Younes, G., and Chakraborty, T."
