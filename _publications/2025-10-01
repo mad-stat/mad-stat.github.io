@@ -1,0 +1,18 @@
+---
+title: "Skew Probabilistic Neural Networks for Learning from Imbalanced Data."
+collection: publications
+category: manuscripts
+date: 2025-10-01
+venue: 'Pattern Recognition.'
+coauthors: "Naik, S.M., Chakraborty, T., **Panja, M.**, Hadid, A., and Chakraborty, B."
+paperurl: 'https://doi.org/10.1016/j.patcog.2025.111677' 
+bibtexurl: 'https://mad-stat.github.io/files/bibtex_skewpnn.bib'
+# 1. Change this to a specific tag
+excerpt_separator: ""
+---
+
+Imbalanced datasets often lead to poor performance of standard classifiers, particularly for minority classes. This work proposes *Skew Probabilistic Neural Networks (SkewPNN)*, a probabilistic neural network with a skew-normal kernel to better model asymmetric class distributions and improve classification accuracy. Hyperparameters are optimized using the Bat algorithm, enhancing model performance across diverse settings.
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/images/SkewPNN_Image.png" alt="SkewPNN Framework" style="width: 90%; max-width: 800px;">
+  <p style="font-size: 0.9em; color: #666;"><i>Overview of the SkewPNN Architecture.</i></p>
+</div>
