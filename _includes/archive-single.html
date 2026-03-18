@@ -44,18 +44,23 @@
       <p style="font-style: italic; color: #666;">Published in {{ post.venue }}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% endif %}
 
-    {% if post.excerpt %}
-      <p class="archive__item-excerpt" itemprop="description" style="margin-top: 0.5em;">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% if post.excerpt and include.type != "list" %}
+      {% if site.read_more != 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+      {% elsif site.read_more == 'enabled' %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
+      {% endif %}
     {% endif %}
     
     {% if include.type != "list" %}
       {% if post.citation %}
-        <p style="font-size: 0.9em;"><strong>Recommended citation:</strong> {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        <p style="font-size: 0.9em;">Recommended citation: {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</p>
       {% endif %}
 
       <p>
-        {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank">Download Paper</a>{% endif %}
-        {% if post.bibtexurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.bibtexurl }}" target="_blank">Download Bibtex</a>{% endif %}
+        {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">Download Paper</a>{% endif %}
+        {% if post.slidesurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">Download Slides</a>{% endif %}
+        {% if post.bibtexurl %}{% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}" target="_blank" rel="noopener noreferrer">Download Bibtex</a>{% endif %}
       </p>
     {% endif %}
 
