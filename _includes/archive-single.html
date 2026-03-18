@@ -25,18 +25,30 @@
 
     {% if include.type != "list" %}
       <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+        
         {% if post.excerpt %}
-          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+          <div class="archive__item-excerpt" itemprop="description">
+            {{ post.excerpt | markdownify }}
+          </div>
         {% endif %}
 
         {% if post.citation %}
-          <p style="font-size: 0.9em;"><strong>Recommended citation:</strong> {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+          <p style="font-size: 0.9em; margin-top: 20px;">
+            <strong>Recommended citation:</strong><br>
+            {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}
+          </p>
         {% endif %}
 
-        <p>
-          {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank">Download Paper</a>{% endif %}
-          {% if post.bibtexurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.bibtexurl }}" target="_blank">Download Bibtex</a>{% endif %}
+        <p style="margin-top: 15px;">
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Download Paper</a>
+          {% endif %}
+          {% if post.bibtexurl %}
+            {% if post.paperurl %} | {% endif %}
+            <a href="{{ post.bibtexurl }}" class="btn btn--info" target="_blank" rel="noopener noreferrer">Download Bibtex</a>
+          {% endif %}
         </p>
+        
       </div>
     {% endif %}
 
