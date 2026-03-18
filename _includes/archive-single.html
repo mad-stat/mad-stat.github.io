@@ -1,11 +1,5 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
 {% if post.id %}
   {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
@@ -14,57 +8,37 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    {% if include.type == "grid" and teaser %}
-      <div class="archive__item-teaser">
-        <img src=
-          {% if teaser contains "://" %}
-            "{{ teaser }}"
-          {% else %}
-            "{{ teaser | prepend: "/images/" | prepend: base_path }}"
-          {% endif %}
-          alt="">
-      </div>
-    {% endif %}
-
-    <h2 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
-      {% endif %}
+    
+    <h2 class="archive__item-title" itemprop="headline" style="margin-bottom: 0.25em;">
+      <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
     </h2>
 
     {% if post.coauthors %}
-      <p class="archive__item-authors" style="font-size: 1.1em; margin-bottom: 0.5em;">
+      <p class="archive__item-authors" style="margin: 0; font-size: 1.1em; color: #333;">
         {{ post.coauthors | markdownify | remove: '<p>' | remove: '</p>' }}
       </p>
     {% endif %}
 
-    {% if post.collection == 'publications' %}
-      <p style="font-style: italic; color: #666;">Published in {{ post.venue }}, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
-    {% endif %}
+    <p style="margin: 0; font-style: italic; color: #666;">
+      {{ post.venue | remove: "." }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+    </p>
 
-    {% if post.excerpt and include.type != "list" %}
-      {% if site.read_more != 'enabled' %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-      {% elsif site.read_more == 'enabled' %}
-        <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
-      {% endif %}
-    {% endif %}
-    
     {% if include.type != "list" %}
-      {% if post.citation %}
-        <p style="font-size: 0.9em;">Recommended citation: {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</p>
-      {% endif %}
+      <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+        {% if post.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+        {% endif %}
 
-      <p>
-        {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank" rel="noopener noreferrer">Download Paper</a>{% endif %}
-        {% if post.slidesurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.slidesurl }}" target="_blank" rel="noopener noreferrer">Download Slides</a>{% endif %}
-        {% if post.bibtexurl %}{% if post.paperurl or post.slidesurl %} | {% endif %}<a href="{{ post.bibtexurl }}" target="_blank" rel="noopener noreferrer">Download Bibtex</a>{% endif %}
-      </p>
+        {% if post.citation %}
+          <p style="font-size: 0.9em;"><strong>Recommended citation:</strong> {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+        {% endif %}
+
+        <p>
+          {% if post.paperurl %}<a href="{{ post.paperurl }}" target="_blank">Download Paper</a>{% endif %}
+          {% if post.bibtexurl %}{% if post.paperurl %} | {% endif %}<a href="{{ post.bibtexurl }}" target="_blank">Download Bibtex</a>{% endif %}
+        </p>
+      </div>
     {% endif %}
 
   </article>
 </div>
-
-    
