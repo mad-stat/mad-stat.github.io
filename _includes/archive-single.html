@@ -22,7 +22,7 @@
     <p style="margin: 0; font-style: italic; color: #666;">
       {{ post.venue | remove: "." }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
       
-      {% if include.type != "list" %}
+      {% if page.url == post.url %}
         <span style="font-style: normal; margin-left: 10px;">
           {% if post.paperurl %}
             <a href="{{ post.paperurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Paper</a>
@@ -35,9 +35,8 @@
       {% endif %}
     </p>
 
-    {% if include.type != "list" %}
+    {% if page.url == post.url %}
       <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; font-style: normal;">
-        
         <div class="archive__item-content" itemprop="description">
           {{ post.content }}
         </div>
