@@ -9,7 +9,7 @@
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     
-    <h2 class="archive__item-title" itemprop="headline" style="margin-bottom: 0.25em;">
+    <h2 class="archive__item-title" itemprop="headline" style="margin-bottom: 0.1em;">
       <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
     </h2>
 
@@ -21,16 +21,26 @@
 
     <p style="margin: 0; font-style: italic; color: #666;">
       {{ post.venue | remove: "." }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
+      
+      {% if include.type != "list" %}
+        <span style="font-style: normal; margin-left: 10px;">
+          {% if post.paperurl %}
+            <a href="{{ post.paperurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Paper</a>
+          {% endif %}
+          {% if post.bibtexurl %}
+            <span style="color: #ccc;"> | </span>
+            <a href="{{ post.bibtexurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Bibtex</a>
+          {% endif %}
+        </span>
+      {% endif %}
     </p>
 
     {% if include.type != "list" %}
-      <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+      <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; font-style: normal;">
         
-        {% if post.excerpt %}
-          <div class="archive__item-excerpt" itemprop="description">
-            {{ post.excerpt | markdownify }}
-          </div>
-        {% endif %}
+        <div class="archive__item-content" itemprop="description">
+          {{ post.content }}
+        </div>
 
         {% if post.citation %}
           <p style="font-size: 0.9em; margin-top: 20px;">
@@ -38,17 +48,6 @@
             {{ post.citation | markdownify | remove: '<p>' | remove: '</p>' }}
           </p>
         {% endif %}
-
-        <p style="margin-top: 15px;">
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Download Paper</a>
-          {% endif %}
-          {% if post.bibtexurl %}
-            {% if post.paperurl %} | {% endif %}
-            <a href="{{ post.bibtexurl }}" class="btn btn--info" target="_blank" rel="noopener noreferrer">Download Bibtex</a>
-          {% endif %}
-        </p>
-        
       </div>
     {% endif %}
 
