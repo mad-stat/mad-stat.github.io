@@ -2,7 +2,7 @@
 title: "EnTransformer: A Deep Generative Transformer for Multivariate Probabilistic Forecasting."
 collection: publications
 category: conferences
-date: 2026-03-15
+date: 2026-03-02
 venue: 'Under Review.'
 coauthors: "Pathak, R., Goswami, R., **Panja, M.**, Ghosh, P., and Chakraborty, T."
 paperurl: 'https://arxiv.org/abs/2603.11909' 
