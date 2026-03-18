@@ -9,4 +9,4 @@ paperurl: 'https://arxiv.org/abs/2603.07261'
 bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
 ---
 
-
+Chaotic time series are difficult to forecast due to nonlinear dynamics and sensitivity to initial conditions. In this work, we propose two symbolic forecasting approaches, *Symbolic Neural Forecaster* and *Symbolic Tree Forecaster*, that learn explicit algebraic equations directly from data. These models combine competitive short-term forecasting performance with interpretability, offering insights into the underlying system dynamics.
