@@ -21,19 +21,17 @@
 
     <p style="margin: 0; font-style: italic; color: #666;">
       {{ post.venue | remove: "." }}, {{ post.date | default: "1900-01-01" | date: "%Y" }}.
-      
-      {% if page.url == post.url %}
-        <span style="font-style: normal; margin-left: 10px;">
-          {% if post.paperurl %}
-            <a href="{{ post.paperurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Paper</a>
-          {% endif %}
-          {% if post.bibtexurl %}
-            <span style="color: #ccc;"> | </span>
-            <a href="{{ post.bibtexurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Bibtex</a>
-          {% endif %}
-        </span>
-      {% endif %}
     </p>
+
+    <div style="margin-top: 0.5em;">
+      {% if post.paperurl %}
+        <a href="{{ post.paperurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Paper</a>
+      {% endif %}
+      {% if post.bibtexurl %}
+        {% if post.paperurl %}<span style="color: #ccc; margin: 0 5px;">|</span>{% endif %}
+        <a href="{{ post.bibtexurl }}" class="btn btn--info" style="padding: 0.2em 0.6em; font-size: 0.8em;" target="_blank">Download Bibtex</a>
+      {% endif %}
+    </div>
 
     {% if page.url == post.url %}
       <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px; font-style: normal;">
