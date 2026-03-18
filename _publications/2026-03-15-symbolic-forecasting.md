@@ -6,7 +6,7 @@ date: 2026-03-01
 venue: 'Under Review.'
 coauthors: "**Panja, M.**, Younes, G., and Chakraborty, T."
 paperurl: 'https://arxiv.org/abs/2603.07261' 
-bibtexurl: 'https://academicpages.github.io/files/bibtex1.bib'
+bibtexurl: 'https://mad-stat.github.io/files/bibtex_symbolic_forecasting.bib'
 # 1. Change this to a specific tag
 excerpt_separator: ""
 ---
