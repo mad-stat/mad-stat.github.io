@@ -8,7 +8,7 @@ author_profile: true
 My research focuses on the intersection of advanced machine learning and real-world complex systems. I develop methodologies in **Statistical Learning**, **Time Series Forecasting**, and **Spatiotemporal Modeling** to address critical challenges across diverse domains.
 
 <div style="text-align: center; margin: 20px 0;">
-  <img src="/images/Research_interest.png" alt=Research Interest" style="width: 90%; max-width: 800px;">
+  <img src="/images/Research_interest.png" alt="Research Interest" style="width: 90%; max-width: 800px;">
 </div>
 
 Statistics continues to evolve in response to the increasingly complex challenges posed by modern science and industry. With the rapid growth of data across diverse domains, a central task is to uncover meaningful structure—identifying patterns, trends, and insights that help us understand what the data truly conveys. This process is often described as *learning from data*. In this context, statistical learning represents a broad collection of methodologies that integrate classical statistical principles with advances in machine learning to analyze and interpret complex datasets.
