@@ -1,4 +1,9 @@
-# Research Interests
+---
+title: "Research Interests"
+layout: archive
+permalink: /portfolio/
+author_profile: true
+---
 
 My research focuses on the intersection of advanced machine learning and real-world complex systems. I develop methodologies in **Statistical Learning**, **Time Series Forecasting**, and **Spatiotemporal Modeling** to address critical challenges across diverse domains.
 
