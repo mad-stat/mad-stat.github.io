@@ -1,0 +1,20 @@
+---
+title: "Van der Pol-informed Neural Networks for Multi-step-ahead Forecasting of Extreme Climatic Events."
+collection: publications
+category: conferences
+date: 2023-01-02
+venue: 'Advances in Neural Information Processing Systems (NeurIPS) - AI4Science.'
+coauthors: "Dutta, A., **Panja, M.**, Kumar, U., Hens, C., and Chakraborty, T."
+paperurl: 'https://openreview.net/attachment?id=OQXCc21rgM&name=pdf' 
+bibtexurl: 'https://mad-stat.github.io/files/bibtex_vpinn.bib'
+# 1. Change this to a specific tag
+excerpt_separator: ""
+---
+
+
+Physics-informed neural networks (PINNs) integrate domain knowledge with data-driven learning, offering a powerful framework for modeling complex dynamical systems. This work proposes VPINN, a *Van der Pol-informed neural network* designed to capture extreme nonlinear dynamics in climatic systems using physics-based loss functions. The approach enhances both data efficiency and physical consistency.
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src="/images/VPINN_Model_image.jpg" alt=VPINN_Model_image" style="width: 90%; max-width: 800px;">
+  <p style="font-size: 0.9em; color: #666;"><i>Architecture of the VPINN model.</i></p>
+</div>
