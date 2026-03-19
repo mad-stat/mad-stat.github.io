@@ -21,7 +21,7 @@ repository               : "mad-stat/mad-stat.github.io"
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
-author:
+author:   
   # Biographic information
   avatar           : "MADHURIMA_PANJA_PASSPORT_PHOTO.jpeg"
   name             : "Madhurima Panja"
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : "https://www.linkedin.com/in/mad-stat/"
+  linkedin         : "mad-stat"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
