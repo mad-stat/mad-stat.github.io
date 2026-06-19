@@ -25,7 +25,7 @@ I actively deploy these theoretical frameworks across a wide array of high-stake
 
 ---
 
-## 🍕 Beyond the Lab
+## 🍕 Beyond Work
 When I'm not developing models or exploring the latest AI tools, you'll probably find me mentoring students or *baking*. As it turns out, both machine learning and baking require a healthy balance of creativity, precision, and patience!
 
 ---
