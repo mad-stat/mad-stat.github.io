@@ -11,12 +11,11 @@ redirect_from:
   Hi! I'm <strong>Madhurima</strong>, a Researcher and Statistical Data Modeler working at the intersection of <strong>machine learning, statistics, and AI</strong>. My work focuses on time series forecasting, spatiotemporal modeling, and scientific machine learning, where I develop models that help us better understand and predict complex real-world systems.
 </div>
 
-## 🔬 Research Vision & Methodologies
+## 🔬 Research Domains
 I focus on building reliable, robust, and interpretable AI systems that extract meaningful insights from highly high-dimensional and non-linear data. My primary methodological areas include:
-* 📐 **Scientific Machine Learning:** Bridging classical statistical principles with deep learning architectures.
-* 📈 **Time Series Forecasting:** Creating new structural and symbolic forecasting methods for complex system dynamics.
-* 🗺️ **Spatiotemporal Modeling:** Engineering frameworks to map and predict intricate spatial and temporal dependencies.
-* 🤖 **Architectural Innovation:** Exploring the evolution and applications of Transformers and Graph Neural Networks (GNNs).
+* **Time Series Forecasting:** Creating new structural and symbolic forecasting methods for complex system dynamics.
+* **Spatiotemporal Modeling:** Developing frameworks to predict intricate spatial and temporal dependencies.
+* **Scientific Machine Learning:** Bridging classical statistical principles with deep learning architectures.
 
 ### 🌍 Interdisciplinary Applications
 I actively deploy these theoretical frameworks across a wide array of high-stakes domains:
@@ -27,7 +26,7 @@ I actively deploy these theoretical frameworks across a wide array of high-stake
 ---
 
 ## 🍕 Beyond the Lab
-When I'm not developing models or exploring the latest AI tools, you'll probably find me mentoring students or *baking*. As it turns out, both machine learning and baking require a healthy balance of creativity, precision, and patience! 🥐✨
+When I'm not developing models or exploring the latest AI tools, you'll probably find me mentoring students or *baking*. As it turns out, both machine learning and baking require a healthy balance of creativity, precision, and patience!
 
 ---
 
